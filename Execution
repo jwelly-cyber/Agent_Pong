@@ -1,0 +1,8 @@
+from langchain_openai import ChatOpenAI
+from langchain_core.messages import SystemMessage
+
+# The Senior Architect: Smart, precise, but more expensive (GPT-4o)
+planner_llm = ChatOpenAI(model="gpt-4o", temperature=0)
+
+# The Junior Developer: Fast, cheap, does the heavy lifting (GPT-4o-mini)
+worker_llm = ChatOpenAI(model="gpt-4o-mini", temperature=0.2)
